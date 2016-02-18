@@ -1,0 +1,30 @@
+d 'STATASTAN': StataStan is the Stata interface to Stan. 
+d 
+d A Stata interface for Bayesian Statistics via Stan.
+d
+d KW: Bayesian
+d KW: Stan
+d KW: Bayes
+d KW: Interface
+d
+d Requires: Stata version 11
+d 
+d Distribution-Date: 20160218
+d
+d Author: Robert Grant
+d
+d Support: https://github.com/stan-dev/statastan/issues
+d 
+f stan.ado
+f stan_schools.ado
+f windowsmonitor.ado
+f inline-opondo.do
+f inline-thompson.do
+f stan_schools_example.do
+f stan_example.do
+f stan.sthlp
+f windowsmonitor.sthlp
+f stan_schools.sthlp
+f stan_schools_model.stan
+f schools.dta
+
