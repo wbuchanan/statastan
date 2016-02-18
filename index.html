@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <title>Statastan by wbuchanan</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="inner">
+        <h1>Statastan</h1>
+        <h2>Stata interface for Stan.</h2>
+        <a href="https://github.com/wbuchanan/statastan" class="button"><small>View project on</small> GitHub</a>
+      </div>
+    </header>
+
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
+          <p><a href="http://mc-stan.org">
+<img src="https://raw.githubusercontent.com/stan-dev/logos/master/logo.png" width="200" alt="Stan Logo">
+</a></p>
+
+<p><strong>StataStan</strong> is the <a href="http://www.stata.com">Stata</a> interface to <a href="http://mc-stan.org">Stan</a>.</p>
+
+<h2>
+<a id="current-status" class="anchor" href="#current-status" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Current status</h2>
+
+<p>StataStan comprises a command <strong>stan</strong>, a command <strong>windowsmonitor</strong> (which is required for <strong>stan</strong> if you are using Windows), and a developing set of template functions under stan_examples that write your data to specific models, so that Stata users can become familiar with Stan without having to write the model code immediately. We invite all Stata users to test it out and give us feedback, either here on Github, or by email to Robert Grant at <a href="mailto:robertstats@live.com">robertstats@live.com</a>.</p>
+
+<p>As of September 2015, there are some basic issues to fix and then the commands will be submitted to the Stata repository <a href="https://ideas.repec.org/s/boc/bocode.html">SSC</a>.</p>
+
+<p><strong>stan</strong> will fit a Stan model by Hamiltonian Monte Carlo. You can also ask for the posterior mode, which is found by optimization with the BFGS (or L-BFGS) algorithm. We intend to create more Stata commands, allowing CODA-style diagnostics and plotting after a model has been fitted and chains stored.</p>
+
+<h2>
+<a id="getting-started" class="anchor" href="#getting-started" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Getting Started</h2>
+
+<ol>
+<li>Download and install <a href="http://mc-stan.org/interfaces/cmdstan.html">CmdStan</a>. Make sure you read the installation instructions and platform-specific appendix before installing. In particular, <em>if you are using 32-bit Windows</em>, you will need to add a file called 'local' to the 'make' folder before you run the <em>make</em> command, which should simply contain the text: <em>BIT=32</em>
+</li>
+<li>Download the .ado and.sthlp files and save them in your Stata personal ado folder (click <a href="http://www.stata.com/support/faqs/programming/personal-ado-directory/">here</a> if you don't know where this is)</li>
+<li>Try out the different examples in the stan-example.do file, or under <strong>help stan</strong>
+</li>
+<li>Try your own data and model. The Stan modelling manual is essential reading for this! Options are listed in detail under <strong>help stan</strong>.</li>
+<li>You can pass your current data (the stuff you see when you type <em>browse</em> in Stata) into Stan, but also you can send matrices and global macros, by specifying their names or typing 'all' in the <em>matrices</em> and <em>globals</em> options. Unlike BUGS / JAGS, Stan just ignores data that your model doesn't use.</li>
+</ol>
+
+<h2>
+<a id="testing" class="anchor" href="#testing" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Testing</h2>
+
+<p>StataStan has been tested with CmdStan 2.6.2 and 2.7.0, Stata versions from 11.2 to 14.0, and Stata flavors IC and SE. We have not added multicore capacity yet, but it is on the to-do list and is easy to do (see Stan manual).</p>
+
+<p>We have run it successfully on Linux, Mac and Windows, but we would like to hear from you if it works (or not) with Windows 10 or versions of Stata older then 11.0.</p>
+
+<h2>
+<a id="other-notes" class="anchor" href="#other-notes" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Other notes</h2>
+
+<ul>
+<li>Non-existent globals and matrices, and non-numeric globals, get quietly ignored</li>
+<li>Missing values are removed casewise by default (but you can change this)</li>
+<li>Users need to take care not to leave output file names as defaults if they have anything precious called output.csv or modes.csv etc. - these files will be overwritten</li>
+</ul>
+
+<h2>
+<a id="licensing" class="anchor" href="#licensing" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Licensing</h2>
+
+<p>StataStan is licensed under BSD.</p>
+        </section>
+
+        <aside id="sidebar">
+          <a href="https://github.com/wbuchanan/statastan/zipball/master" class="button">
+            <small>Download</small>
+            .zip file
+          </a>
+          <a href="https://github.com/wbuchanan/statastan/tarball/master" class="button">
+            <small>Download</small>
+            .tar.gz file
+          </a>
+
+          <p class="repo-owner"><a href="https://github.com/wbuchanan/statastan"></a> is maintained by <a href="https://github.com/wbuchanan">wbuchanan</a>.</p>
+
+          <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
+        </aside>
+      </div>
+    </div>
+
+  
+  </body>
+</html>
