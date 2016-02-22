@@ -1,0 +1,4 @@
+language: stata
+sudo: false
+
+
