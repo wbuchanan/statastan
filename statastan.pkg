@@ -21,7 +21,7 @@ f windowsmonitor.ado
 f inline-opondo.do
 f inline-thompson.do
 f stan_schools_example.do
-f stan_example.do
+f stan-example.do
 f stan.sthlp
 f windowsmonitor.sthlp
 f stan_schools.sthlp
